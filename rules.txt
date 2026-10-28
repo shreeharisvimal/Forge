@@ -1,0 +1,692 @@
+Forge v2 Engineering & Design Specification
+
+====================================================
+PROJECT
+====================================================
+
+Project Name: Forge
+
+Forge is a premium offline-first Android fitness tracker built entirely in Flutter.
+
+The goal is to create the highest quality offline gym tracker possible with a beautiful Apple-inspired glassmorphic interface while following Flutter best practices and clean architecture.
+
+Everything must be production-ready.
+
+====================================================
+CORE PRINCIPLES
+====================================================
+
+• 100% Offline First
+• No Firebase
+• No Login
+• No Internet Required
+• Android First
+• Feature-first Architecture
+• Modular
+• Scalable
+• Maintainable
+• Production Ready
+• Material 3
+• Apple-inspired UI
+• VisionOS-inspired glass effects
+• 60 FPS animations
+• Accessibility built-in
+• Zero hardcoded spacing
+• Zero hardcoded colors
+• Design Token System
+• Reusable UI Components
+• Consistent Animations
+• Clean Architecture
+• SOLID Principles
+• Riverpod only
+• Hive only
+• Null Safety everywhere
+
+====================================================
+CODE QUALITY RULES
+====================================================
+
+Never use
+
+setState() for application state
+
+Global variables
+
+Business logic inside widgets
+
+God classes
+
+Widgets larger than ~250 lines
+
+Duplicate code
+
+Magic numbers
+
+Magic strings
+
+Deprecated APIs
+
+Default Material Cards
+
+Default AlertDialogs
+
+Default BottomNavigationBar
+
+Default FloatingActionButton
+
+Default BottomSheets
+
+Default SnackBars
+
+Instead use reusable Forge components.
+
+====================================================
+ARCHITECTURE
+====================================================
+
+Feature-first architecture.
+
+lib/
+
+app/
+
+core/
+
+features/
+
+Each feature contains
+
+data/
+
+domain/
+
+presentation/
+
+providers/
+
+widgets/
+
+No shared feature models.
+
+Keep every feature self-contained.
+
+====================================================
+DESIGN SYSTEM
+====================================================
+
+Everything must use the Forge Design System.
+
+Never directly style widgets.
+
+Always use theme extensions and design tokens.
+
+====================================================
+DESIGN TOKENS
+====================================================
+
+Colors
+
+Spacing
+
+Radius
+
+Typography
+
+Elevation
+
+Animation Duration
+
+Animation Curves
+
+Glass Blur
+
+Border Width
+
+Shadows
+
+Opacity
+
+Gradients
+
+Everything must come from tokens.
+
+Nothing hardcoded.
+
+====================================================
+VISUAL STYLE
+====================================================
+
+Inspired by
+
+Apple Fitness
+
+VisionOS
+
+iOS 26
+
+Arc Browser
+
+Flighty
+
+Gentler Streak
+
+Linear
+
+Notion Calendar
+
+The app should feel premium.
+
+Minimal.
+
+Modern.
+
+Elegant.
+
+====================================================
+GLASSMORPHISM
+====================================================
+
+Glass is the default UI.
+
+Every surface uses
+
+Backdrop Blur
+
+Frosted Glass
+
+Translucent Gradient
+
+Low-opacity White
+
+Soft Borders
+
+Rounded Corners
+
+Layered Shadows
+
+Ambient Glow
+
+Soft Highlights
+
+No flat surfaces.
+
+====================================================
+GLASS COMPONENTS
+====================================================
+
+GlassCard
+
+GlassButton
+
+GlassIconButton
+
+GlassBottomBar
+
+GlassNavigationRail
+
+GlassFAB
+
+GlassDialog
+
+GlassBottomSheet
+
+GlassChip
+
+GlassBadge
+
+GlassAvatar
+
+GlassSearchBar
+
+GlassTextField
+
+GlassDropdown
+
+GlassSegmentedControl
+
+GlassProgressBar
+
+GlassSlider
+
+GlassSwitch
+
+GlassCalendarCell
+
+GlassWorkoutCard
+
+GlassExerciseTile
+
+GlassChartCard
+
+GlassStatisticCard
+
+GlassListTile
+
+GlassContainer
+
+All screens must only compose these components.
+
+====================================================
+COLOR SYSTEM
+====================================================
+
+Background
+
+AMOLED Black
+
+Surface
+
+Dark Frosted Glass
+
+Primary
+
+#7C4DFF
+
+Secondary
+
+#00E5FF
+
+Success
+
+#00E676
+
+Warning
+
+#FFD54F
+
+Danger
+
+#FF5252
+
+Info
+
+#29B6F6
+
+Glass
+
+8–12% white opacity
+
+Borders
+
+12–18% white opacity
+
+====================================================
+TYPOGRAPHY
+====================================================
+
+Google Fonts
+
+Inter
+
+Modern hierarchy
+
+Large display titles
+
+Readable body
+
+Premium number styling
+
+Dynamic text scaling
+
+====================================================
+ICONOGRAPHY
+====================================================
+
+Rounded outlined icons
+
+Consistent stroke widths
+
+24dp default
+
+Animated state transitions
+
+====================================================
+SPACING SYSTEM
+====================================================
+
+Use spacing tokens only.
+
+Examples
+
+4
+
+8
+
+12
+
+16
+
+20
+
+24
+
+32
+
+40
+
+48
+
+Never hardcode spacing.
+
+====================================================
+RADIUS SYSTEM
+====================================================
+
+Small
+
+12
+
+Medium
+
+18
+
+Large
+
+24
+
+Extra Large
+
+28
+
+====================================================
+ANIMATION SYSTEM
+====================================================
+
+Every interaction animates.
+
+Use
+
+Fade
+
+Slide
+
+Scale
+
+Hero
+
+Spring
+
+Shared Axis
+
+Container Transform
+
+Animated Numbers
+
+Animated Charts
+
+Animated Progress
+
+Animated Calendar
+
+Page Transitions
+
+Bottom Sheet Physics
+
+Navigation Indicator
+
+Press Animations
+
+Hover Animations
+
+Haptic Feedback
+
+====================================================
+MOTION RULES
+====================================================
+
+Smooth easing
+
+Consistent durations
+
+Natural movement
+
+No abrupt transitions
+
+====================================================
+LAYOUT
+====================================================
+
+Responsive.
+
+Phone first.
+
+Tablet ready.
+
+Desktop compatible.
+
+Never hardcode widths.
+
+Use adaptive layouts.
+
+====================================================
+PERFORMANCE
+====================================================
+
+Target
+
+60 FPS
+
+Lazy loading
+
+Minimal rebuilds
+
+Riverpod selectors
+
+Const constructors
+
+Efficient Hive queries
+
+Image caching
+
+Pagination where required
+
+====================================================
+STATE MANAGEMENT
+====================================================
+
+Riverpod only.
+
+No Provider.
+
+No Bloc.
+
+No GetX.
+
+Keep providers small.
+
+Single responsibility.
+
+====================================================
+DATABASE
+====================================================
+
+Hive only.
+
+Repositories.
+
+Services.
+
+Models.
+
+Migration support.
+
+Export.
+
+Import.
+
+Backup.
+
+Versioning.
+
+====================================================
+TESTING
+====================================================
+
+Every feature must include
+
+Unit Tests
+
+Widget Tests
+
+Repository Tests
+
+Serialization Tests
+
+Provider Tests
+
+====================================================
+ACCESSIBILITY
+====================================================
+
+Semantic labels
+
+Large touch targets
+
+High contrast
+
+Screen reader friendly
+
+Dynamic font scaling
+
+====================================================
+ROADMAP
+====================================================
+
+Phase 0
+
+Foundation
+
+Dependencies
+
+Architecture
+
+Theme
+
+Design System
+
+Glass Framework
+
+Animation Framework
+
+Navigation
+
+Typography
+
+Responsive System
+
+------------------------
+
+Phase 1
+
+Hive
+
+Repositories
+
+Models
+
+Providers
+
+Seed Data
+
+Validation
+
+Import
+
+Export
+
+Backup
+
+Testing
+
+------------------------
+
+Phase 2
+
+Forge UI Kit
+
+Build every reusable Glass component.
+
+No feature screens yet.
+
+------------------------
+
+Phase 3
+
+Dashboard
+
+------------------------
+
+Phase 4
+
+Calendar
+
+------------------------
+
+Phase 5
+
+Workout Split
+
+------------------------
+
+Phase 6
+
+Exercise Library
+
+------------------------
+
+Phase 7
+
+Workout Session Engine
+
+------------------------
+
+Phase 8
+
+PR Engine
+
+------------------------
+
+Phase 9
+
+Progress
+
+------------------------
+
+Phase 10
+
+Measurements
+
+------------------------
+
+Phase 11
+
+Settings
+
+------------------------
+
+Phase 12
+
+Optimization
+
+Animations
+
+Accessibility
+
+Testing
+
+Release
+
+====================================================
+RULE FOR EVERY FUTURE PROMPT
+====================================================
+
+Every generated feature must
+
+• Use only Forge Design System components.
+• Follow the feature-first architecture.
+• Never introduce duplicate code.
+• Never use default Material widgets when a Forge component exists.
+• Compile with zero warnings.
+• Pass flutter analyze.
+• Pass flutter test.
+• Be production-ready before moving to the next phase.
